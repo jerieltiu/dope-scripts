@@ -37,7 +37,7 @@ while (count < 69):
     submit = driver.find_element_by_css_selector(
         '.appsMaterialWizButtonPaperbuttonLabel.quantumWizButtonPaperbuttonLabel.exportLabel'
     )
-    submit.click(link)
+    submit.click()
     count = count + 1
     driver.get(link)
 
