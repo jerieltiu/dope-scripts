@@ -39,7 +39,7 @@ while (count < 69):
     )
     submit.click(link)
     count = count + 1
-    driver.get(
+    driver.get(link)
 
 if __name__ == '__main__':
     pass
