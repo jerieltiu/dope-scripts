@@ -11,7 +11,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 os.environ[
-    "PATH"] += r":/Users/jefftheeagle/Code/Personal/dope-scripts/gformSpam" # folder of web driver
+    "PATH"] += r":/Users/jerieltiu/Code/Personal/dope-scripts/gformSpam" # folder of web driver
 driver = webdriver.Chrome()
 
 link = "https://docs.google.com/forms/d/e/1FAIpQLSec7AxgHDDQCN4wWQr5-2yg7kL_G-zCZEK8BLdqphuBsVoaSw/viewform" # inset gform here
@@ -24,7 +24,7 @@ while (count < 69):
     formName = random.choices(string.ascii_uppercase + string.digits, k=19)
     d = driver.find_elements_by_css_selector(
         '.quantumWizTextinputPaperinputInput.exportInput')
-    d[0].send_keys('test@gmail.com')
+    d[0].send_keys('test@gmail.com') # if first field needs a valid email
     d[1].send_keys(formName)
     d[2].send_keys(formName)
     d[3].send_keys(formName)
@@ -37,9 +37,9 @@ while (count < 69):
     submit = driver.find_element_by_css_selector(
         '.appsMaterialWizButtonPaperbuttonLabel.quantumWizButtonPaperbuttonLabel.exportLabel'
     )
-    submit.click(link)
+    submit.click()
     count = count + 1
-    driver.get(
+    driver.get(link)
 
 if __name__ == '__main__':
     pass
